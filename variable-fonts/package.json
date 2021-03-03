@@ -1,0 +1,22 @@
+{
+  "author": "Jovana Jovanovska",
+  "name": "variable-fonts",
+  "description": "Variable Font Animations",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
+    "gatsby": "^2.24.50",
+    "gatsby-plugin-styled-components": "^3.3.12",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.2.0"
+  }
+}
