@@ -31,8 +31,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'IBM Plex Sans Roman', Times;
     /* font-family: 'Movement'; */
     /* font-family: 'Ancho'; */
-    background-color: #d87f44;
-    background-color: #87986c;
   }
 `
 

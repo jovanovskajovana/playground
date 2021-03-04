@@ -7,20 +7,32 @@ import { TextLayout } from '../styles/PageLayout'
 
 /* Animation keyframes */
 const inhale = keyframes`
-  50% {
+  0% {
     font-variation-settings: 'wght' 700, 'wdth' 100;
+    font-size: 11vw;
+  }
+  50% {
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-size: 10vw;
   }
   100% {
-    font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-variation-settings: 'wght' 700, 'wdth' 100;
+    font-size: 11vw;
   }
 `
 
 const exhale = keyframes`
-  50% {
+  0% {
     font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-size: 10vw;
+  }
+  50% {
+    font-variation-settings: 'wght' 700, 'wdth' 100;
+    font-size: 11vw;
   }
   100% {
-    font-variation-settings: 'wght' 700, 'wdth' 100;
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-size: 10vw;
   }
 `
 
@@ -28,24 +40,13 @@ const exhale = keyframes`
 const Text = styled.h1`
   font-weight: 100;
   font-size: 10vw;
-  font-variation-settings: ${(props) => props.role === 'reverse' ? `'wght' 100, 'wdth' 85;` : `'wght' 700, 'wdth' 100;`};
+  font-variation-settings: ${(props) => props.role === 'reverse' ? `'wght' 700, 'wdth' 100;` : `'wght' 100, 'wdth' 85;`};
   animation: ${(props) => props.role === 'reverse' ? css`${inhale} 4s infinite forwards;` : css`${exhale} 4s infinite forwards;`}
 `
 
-/* First Page */
-const SplitText = ({ text, role }) => (
-  <Text role={role}>
-    {text.split('').map((char, index) => (
-      <span key={index}>
-        {char}
-      </span>
-    ))}
-  </Text>
-)
-
-/* First Page */
-const First = () => (
-  <Page color="#2a3035">
+/* Second page */
+const Second = () => (
+  <Page color="#b4c3bb">
     <TextLayout>
       <Text>inhale</Text>
       <Text role="reverse">exhale</Text>
@@ -53,4 +54,4 @@ const First = () => (
   </Page>
 )
 
-export default First
+export default Second
