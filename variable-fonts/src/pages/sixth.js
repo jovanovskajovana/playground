@@ -60,7 +60,7 @@ const Text = styled.h1`
 const Char = styled.span`
   display: inline-block;
 	transform: scale(0);
-  animation: ${bounce} 2500ms 200ms infinite reverse;
+  animation: ${bounce} 2500ms infinite reverse;
   animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 40ms)`};
 `
 

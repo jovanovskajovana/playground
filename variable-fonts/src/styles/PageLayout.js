@@ -19,6 +19,7 @@ const PageLayout = styled.div`
   flex-direction: column;
   background-color: ${(props) => props.bgColor};
   height: 100vh;
+  overflow: hidden;
 `
 
 const Navigation = styled.nav`
