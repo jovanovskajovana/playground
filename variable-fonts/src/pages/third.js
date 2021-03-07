@@ -9,29 +9,29 @@ import { TextLayout } from '../styles/PageLayout'
 const move = keyframes`
   0% {
     font-variation-settings: 'wght' 100, 'wdth' 75;
-    font-size: 10vw;
+    font-size: 8vw;
   }
   60% {
     font-variation-settings: 'wght' 700, 'wdth' 100;
-    font-size: 11vw;
+    font-size: 9vw;
   }
   
   100% {
     font-variation-settings: 'wght' 100, 'wdth' 75;
-    font-size: 10vw;
+    font-size: 8vw;
   }
 `
 
 /* Styled components */
 const Text = styled.h1`
   font-weight: 100;
-  font-size: 10vw;
+  font-size: 8vw;
 `
 
 const Char = styled.span`
   font-variation-settings: 'wght' 100, 'wdth' 75;
-  animation: ${move} 2500ms infinite both;
-  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 250ms)`};
+  animation: ${move} 2000ms infinite both;
+  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 200ms)`};
 `
 
 /* Helper component: Splits text into chars to animate each char */

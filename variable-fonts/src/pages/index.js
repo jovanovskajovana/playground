@@ -7,105 +7,41 @@ import { TextLayout } from '../styles/PageLayout'
 
 /* Animation keyframes */
 const scale = keyframes`
-  0% {
-		transform: scale(1);
-	}
-	4% {
-		transform: scale(1);
-	}
-	8% {
-		transform: scale(1);
-	}
-  14% {
-		transform: scale(1);
-	}
-	18% {
-		transform: scale(1);
-	}
-	26% {
-		transform: scale(1.01);
-	}
-	28% {
-		transform: scale(1.01);
-	}
+	0% {
+		transform: scale(0);
+		font-variation-settings: 'wght' 100, 'wdth' 75;
+    font-size: 8vw;
+	}	
 	40% {
 		transform: scale(0.98);
-	}
-	42% {
-		transform: scale(0.98);
-	}
-	56% {
-		transform: scale(1.05);
-	}
-	58% {
-		transform: scale(1.04);
-	}
-	72% {
-		transform: scale(0.87);
-	}
-	86% {
-		transform: scale(1.37);
-	}
+		font-variation-settings: 'wght' 600, 'wdth' 100;
+    font-size: 9vw;
+	}	
+	55% {
+		transform: scale(0.86);
+		font-variation-settings: 'wght' 100, 'wdth' 75;
+    font-size: 8vw;
+	}	
 	100% {
-		transform: scale(1.37);
-	}
+		transform: scale(1);
+		font-variation-settings: 'wght' 600, 'wdth' 100;
+    font-size: 9vw;
+	}	
 `
-
-// const fade  = keyframes`
-//   0% {
-// 		opacity: 1;
-// 	}
-// 	4% {
-// 		opacity: 1;
-// 	}
-// 	8% {
-// 		opacity: 1;
-// 	}
-// 	14% {
-// 		opacity: 1;
-// 	}
-// 	18% {
-// 		opacity: 1;
-// 	}
-// 	26% {
-// 		opacity: 1.01;
-// 	}
-// 	28% {
-// 		opacity: 1.01;
-// 	}
-// 	40% {
-// 		opacity: 0.98;
-// 	}
-// 	42% {
-// 		opacity: 0.98;
-// 	}
-// 	56% {
-// 		opacity: 1.05;
-// 	}
-// 	58% {
-// 		opacity: 1.04;
-// 	}
-// 	72% {
-// 		opacity: 0.87;
-// 	}
-// 	86% {
-// 		opacity: 1.37;
-// 	}
-// 	100% {
-// 		opacity: 0;
-// 	}
-// `
 
 /* Styled components */
 const Text = styled.h1`
-  font-weight: 600;
-  font-size: 10vw;
+  font-weight: 100;
+  font-size: 8vw;
 `
 
 const Char = styled.span`
   display: inline-block;
-  animation: ${scale} 3000ms infinite reverse;
-  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 300ms)`};
+	transform: scale(0);
+	transform-origin: 50% 100%;
+	font-variation-settings: 'wght' 100, 'wdth' 75;
+  animation: ${scale} 1500ms forwards;
+  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 40ms)`};
 `
 
 /* Helper component: Splits text into chars to animate each char */
@@ -121,7 +57,7 @@ const SplitText = ({ text }) => (
 
 /* First Page */
 const First = () => (
-  <Page color="#2a3035">
+  <Page color="#39424a">
     <TextLayout>
       <SplitText text="let's cheer up" />
     </TextLayout>

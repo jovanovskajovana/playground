@@ -44,7 +44,7 @@ const bounce = keyframes`
 		transform: scale(0.87);
 	}
 	86% {
-		transform: scale(1.37);
+		transform: scale(1.2);
 	}
 	100% {
 		transform: scale(0);
@@ -53,14 +53,15 @@ const bounce = keyframes`
 
 /* Styled components */
 const Text = styled.h1`
-  font-weight: 100;
-  font-size: 10vw;
+  font-weight: 600;
+  font-size: 8vw;
 `
 
 const Char = styled.span`
   display: inline-block;
-  animation: ${bounce} 3000ms infinite reverse;
-  /* animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 300ms)`}; */
+	transform: scale(0);
+  animation: ${bounce} 2500ms 200ms infinite reverse;
+  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 40ms)`};
 `
 
 /* Helper component: Splits text into chars to animate each char */

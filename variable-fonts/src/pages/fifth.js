@@ -91,9 +91,6 @@ const fade  = keyframes`
 	86% {
 		opacity: 1.37;
 	}
-	96% {
-		opacity: 0;
-	}
 	100% {
 		opacity: 0;
 	}
@@ -102,18 +99,18 @@ const fade  = keyframes`
 /* Styled components */
 const Text = styled.h1`
   font-weight: 700;
-  font-size: 10vw;
+  font-size: 8vw;
   padding-bottom: 0.4em;
   margin-bottom: -0.4em;
   opacity: 0; 
-  animation: ${fade} 2500ms infinite reverse;
+  animation: ${fade} 2000ms infinite reverse;
   overflow: hidden;
 `
 
 const Char = styled.span`
   display: inline-block;
-  animation: ${jump} 2500ms infinite;
-  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 50ms)`};
+  animation: ${jump} 2000ms infinite;
+  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 45ms)`};
 `
 
 /* Helper component: Splits text into chars to animate each char */
