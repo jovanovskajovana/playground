@@ -39,9 +39,9 @@ const exhale = keyframes`
 /* Styled components */
 const Text = styled.h1`
   font-weight: 100;
-  font-size: 10vw;
+  font-size: ${(props) => props.role === 'reverse' ? `11vw;` : `10vw;`};
   font-variation-settings: ${(props) => props.role === 'reverse' ? `'wght' 700, 'wdth' 100;` : `'wght' 100, 'wdth' 85;`};
-  animation: ${(props) => props.role === 'reverse' ? css`${inhale} 3s infinite forwards;` : css`${exhale} 3s infinite forwards;`}
+  animation: ${(props) => props.role === 'reverse' ? css`${inhale} 2500ms 200ms infinite forwards;` : css`${exhale} 2500ms 200ms infinite forwards;`}
 `
 
 /* Second page */

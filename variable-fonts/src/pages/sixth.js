@@ -6,33 +6,79 @@ import { TextLayout } from '../styles/PageLayout'
 
 
 /* Animation keyframes */
-const inhale = keyframes`
+const bounce = keyframes`
   0% {
-    font-variation-settings: 'wght' 700, 'wdth' 100;
-    font-size: 11vw;
-  }
-  50% {
-    font-variation-settings: 'wght' 100, 'wdth' 85;
-    font-size: 10vw;
-  }
-  100% {
-    font-variation-settings: 'wght' 700, 'wdth' 100;
-    font-size: 11vw;
-  }
+		transform: scale(1);
+	}
+	4% {
+		transform: scale(1);
+	}
+	8% {
+		transform: scale(1);
+	}
+  14% {
+		transform: scale(1);
+	}
+	18% {
+		transform: scale(1);
+	}
+	26% {
+		transform: scale(1.01);
+	}
+	28% {
+		transform: scale(1.01);
+	}
+	40% {
+		transform: scale(0.98);
+	}
+	42% {
+		transform: scale(0.98);
+	}
+	56% {
+		transform: scale(1.05);
+	}
+	58% {
+		transform: scale(1.04);
+	}
+	72% {
+		transform: scale(0.87);
+	}
+	86% {
+		transform: scale(1.37);
+	}
+	100% {
+		transform: scale(0);
+	}
 `
 
 /* Styled components */
 const Text = styled.h1`
   font-weight: 100;
   font-size: 10vw;
-  font-variation-settings: 'wght' 700, 'wdth' 100;
-  animation: ${inhale} 4s infinite forwards;
 `
-//bounce text -> pogolemo pomalo bukvite ili celo
+
+const Char = styled.span`
+  display: inline-block;
+  animation: ${bounce} 3000ms infinite reverse;
+  /* animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 300ms)`}; */
+`
+
+/* Helper component: Splits text into chars to animate each char */
+const SplitText = ({ text }) => (
+  <Text>
+    {text.split('').map((char, index) => (
+      <Char key={index} charIndex={index}>
+        {char}
+      </Char>
+    ))}
+  </Text>
+)
+
+/* Sixt Page */
 const Sixth = () => (
-  <Page color="#c1b9f5">
+  <Page color="#aabce3">
     <TextLayout>
-      <Text>repeat</Text>
+      <SplitText text="repeat" />
     </TextLayout>
   </Page>
 )

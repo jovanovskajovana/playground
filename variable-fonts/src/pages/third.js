@@ -30,8 +30,8 @@ const Text = styled.h1`
 
 const Char = styled.span`
   font-variation-settings: 'wght' 100, 'wdth' 75;
-  animation: ${move} 3s infinite both;
-  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 0.3s)`};
+  animation: ${move} 2500ms infinite both;
+  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 250ms)`};
 `
 
 /* Helper component: Splits text into chars to animate each char */
@@ -45,6 +45,7 @@ const SplitText = ({ text }) => (
   </Text>
 )
 
+/* Third Page */
 const Third = () => (
   <Page color="#ffbaba">
     <TextLayout>

@@ -18,6 +18,15 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: 'Inter';
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+
 `
 
 export default GlobalStyles
