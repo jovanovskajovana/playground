@@ -41,7 +41,7 @@ const Text = styled.h1`
   font-weight: 100;
   font-size: 10vw;
   font-variation-settings: ${(props) => props.role === 'reverse' ? `'wght' 700, 'wdth' 100;` : `'wght' 100, 'wdth' 85;`};
-  animation: ${(props) => props.role === 'reverse' ? css`${inhale} 4s infinite forwards;` : css`${exhale} 4s infinite forwards;`}
+  animation: ${(props) => props.role === 'reverse' ? css`${inhale} 3s infinite forwards;` : css`${exhale} 3s infinite forwards;`}
 `
 
 /* Second page */

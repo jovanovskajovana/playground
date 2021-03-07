@@ -1,13 +1,35 @@
 import React from 'react'
-import styled, { css, keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import Page from '../components/Page'
 import { TextLayout } from '../styles/PageLayout'
 
+
+/* Animation keyframes */
+const inhale = keyframes`
+  0% {
+    font-variation-settings: 'slnt' -10;
+  }
+  50% {
+    font-variation-settings: 'slnt' 0;
+  }
+  100% {
+    font-variation-settings: 'slnt' -10;
+  }
+`
+
+/* Styled components */
+const Text = styled.h1`
+  font-weight: 600;
+  font-size: 10vw;
+  font-variation-settings: 'slnt' 0;
+  animation: ${inhale} 1s infinite forwards;
+`
+
 const Fourth = () => (
-  <Page color="#91c4b8">
+  <Page color="#b4c3bb">
     <TextLayout>
-      {/* <SplitText text="waves" /> */}
+      <Text>dance</Text>
     </TextLayout>
   </Page>
 )

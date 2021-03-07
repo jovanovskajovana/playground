@@ -1,23 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
-import fontIBM from '../assets/IBMPlexSansVar-Roman.ttf';
-import fontMovement from '../assets/Movement-DirectThin.woff';
-import fontAncho from '../assets/AnchoGX.ttf';
+import fontInter from '../assets/Inter-VariableFont.ttf';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: 'IBM Plex Sans Roman';
-    src: url(${fontIBM});
-  }
-
-  @font-face {
-    font-family: 'Movement';
-    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/MovementV.ttf");
-  }
-
-  @font-face {
-    font-family: 'Ancho';
-    src: url(${fontAncho});
+    font-family: 'Inter';
+    src: url(${fontInter});
   }
 
   * {
@@ -28,9 +16,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'IBM Plex Sans Roman', Times;
-    /* font-family: 'Movement'; */
-    /* font-family: 'Ancho'; */
+    font-family: 'Inter';
   }
 `
 

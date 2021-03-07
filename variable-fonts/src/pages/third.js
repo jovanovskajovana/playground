@@ -8,7 +8,7 @@ import { TextLayout } from '../styles/PageLayout'
 /* Animation keyframes */
 const move = keyframes`
   0% {
-    font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-variation-settings: 'wght' 100, 'wdth' 75;
     font-size: 10vw;
   }
   60% {
@@ -17,7 +17,7 @@ const move = keyframes`
   }
   
   100% {
-    font-variation-settings: 'wght' 100, 'wdth' 85;
+    font-variation-settings: 'wght' 100, 'wdth' 75;
     font-size: 10vw;
   }
 `
@@ -29,9 +29,9 @@ const Text = styled.h1`
 `
 
 const Char = styled.span`
-  font-variation-settings: 'wght' 100, 'wdth' 85;
-  animation: ${move} 4s infinite both;
-  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 0.4s)`};
+  font-variation-settings: 'wght' 100, 'wdth' 75;
+  animation: ${move} 3s infinite both;
+  animation-delay: ${(props) => `calc((${props.charIndex} + 1) * 0.3s)`};
 `
 
 /* Helper component: Splits text into chars to animate each char */
